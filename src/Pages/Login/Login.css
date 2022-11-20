@@ -1,0 +1,59 @@
+.login-box {
+  height: 523px;
+  width: 486px;
+  margin-left: 438px;
+  margin-top: 0px;
+  border-radius: 4px;
+  background-color: white;
+  padding: 26px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(0, 0, 0, 0.591) !important;
+  opacity: 1;
+}
+.login-btn {
+  width: 100%;
+}
+
+.login-email-input {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  padding-bottom: 5px;
+  background: none;
+}
+.login-password-input {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  padding-bottom: 5px;
+  background: none;
+}
+.have-account {
+  text-align: center;
+}
+.line-one {
+  width: 200px;
+  margin-top: 15px;
+}
+.line-two {
+  width: 200px;
+  margin-top: 15px;
+}
+.social-media-logging {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-google {
+  border: 1px solid black;
+  padding: 5px 14px;
+  border-radius: 23px;
+}
+.login-facebook {
+  border: 1px solid black;
+  padding: 5px 21px;
+  border-radius: 23px;
+  margin-top: 10px;
+}

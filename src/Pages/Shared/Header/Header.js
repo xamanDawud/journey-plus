@@ -17,6 +17,9 @@ const Header = () => {
         />
       </div>
       <div className="mt-5 ml-28">
+        <Link className="text-white mr-10" to="/home">
+          Home
+        </Link>
         <Link className="text-white mr-10" to="/news">
           News
         </Link>

@@ -4,8 +4,8 @@ import Carousel from "better-react-carousel";
 import img1 from "../../assests/images/Sajek.png";
 import img2 from "../../assests/images/sundorbon.png";
 import img3 from "../../assests/images/Sreemongol.png";
-
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -17,6 +17,7 @@ const Home = () => {
           headquarters in southeastern Bangladesh. It is famous mostly for its
           long natural sandy beach, and it ...
         </p>
+
         <button className="btn btn-warning">
           Booking <FaArrowRight className="ml-2" />
         </button>
@@ -24,21 +25,31 @@ const Home = () => {
       <div className="home-right-section mt-40 ml-28 relative">
         <Carousel cols={3} rows={1} gap={10} loop>
           <Carousel.Item>
-            <h1 className="text-3xl font-bold coxs-title mb-4 absolute bottom-0 left-8">
-              Cox's Bazar
-            </h1>
+            <Link to="/coxsbazar">
+              {" "}
+              <button className="text-3xl font-bold coxs-title mb-4 absolute bottom-0 left-8 hover:cursor-pointer">
+                Cox's Bazar
+              </button>
+            </Link>
             <img alt="" width="100%" src={img1} />
           </Carousel.Item>
+
           <Carousel.Item>
-            <h1 className="text-3xl font-bold coxs-title mb-4 absolute bottom-0 left-56">
-              Sundarban
-            </h1>
+            <Link to="/sundarbans">
+              {" "}
+              <button className="text-3xl font-bold coxs-title mb-4 absolute bottom-0 left-56 hover:cursor-pointer">
+                Sundarban
+              </button>
+            </Link>
             <img alt="" width="100%" src={img2} />
           </Carousel.Item>
           <Carousel.Item>
-            <h1 className="text-3xl font-bold coxs-title mb-4 absolute bottom-0 right-10">
-              Sreemangal
-            </h1>
+            <Link to="/sreemangal">
+              {" "}
+              <button className="text-3xl font-bold coxs-title mb-4 absolute bottom-0 right-10 hover:cursor-pointer">
+                Sreemangal
+              </button>
+            </Link>
             <img alt="" width="100%" src={img3} />
           </Carousel.Item>
           <Carousel.Item>
