@@ -1,0 +1,16 @@
+/* font-family: 'Bebas Neue', cursive; */
+.home {
+  width: 1200px;
+  margin: auto;
+  color: white;
+}
+.home-left-section {
+  width: 400px;
+}
+.home-right-section {
+  width: 620px;
+}
+
+.coxs-title {
+  font-family: "Bebas Neue", cursive;
+}

@@ -1,0 +1,20 @@
+.logoIcon {
+  width: 236px;
+  height: 78px;
+  color: white;
+  padding-top: 10px;
+}
+.search-box {
+  background: #d7d2d285;
+  width: 350px;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid white;
+  margin-top: 27px !important;
+  padding-left: 10px;
+}
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: white !important;
+  opacity: 1;
+}
