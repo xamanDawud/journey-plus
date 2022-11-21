@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { SiFalcon } from "react-icons/si";
+import { AuthContext } from "../../../ContextProvider/ContextProvider";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const logsOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <nav className="flex justify-content-between container mx-auto">
       <div>
@@ -12,7 +21,7 @@ const Header = () => {
           className="inline search-box text-white"
           type="text"
           name="search"
-          placeholder="Search Your Destination"
+          placeholder={`Search Your Destination ${user?.displayName || ""}`}
           id=""
         />
       </div>
@@ -32,9 +41,17 @@ const Header = () => {
         <Link className="text-white mr-10" to="/contact">
           Contact
         </Link>
-        <Link className="text-white mr-10" to="/login">
-          <button className="btn btn-warning">Login</button>
-        </Link>
+        {user?.displayName ? (
+          <Link className="text-white mr-10" to="/login">
+            <button onClick={logsOut} className="btn btn-warning">
+              Logout
+            </button>
+          </Link>
+        ) : (
+          <Link className="text-white mr-10" to="/login">
+            <button className="btn btn-warning">Login</button>
+          </Link>
+        )}
       </div>
     </nav>
   );

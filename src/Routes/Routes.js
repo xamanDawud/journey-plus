@@ -9,6 +9,7 @@ import News from "../Pages/News/News";
 import Register from "../Pages/Register/Register";
 import Sreemangal from "../Pages/Sreemangal/Sreemangal";
 import Sundarbans from "../Pages/Sundarbans/Sundarbans";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const routes = createBrowserRouter([
   {
@@ -50,7 +51,11 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/hotels",
-        element: <LoadRomes></LoadRomes>,
+        element: (
+          <PrivateRoutes>
+            <LoadRomes></LoadRomes>
+          </PrivateRoutes>
+        ),
         loader: () => fetch("http://localhost:5000/romes"),
       },
     ],
