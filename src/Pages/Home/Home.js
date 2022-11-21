@@ -6,8 +6,11 @@ import img2 from "../../assests/images/sundorbon.png";
 import img3 from "../../assests/images/Sreemongol.png";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
+  const romes = useLoaderData();
+  console.log(romes);
   return (
     <div className="home flex justify-conte-between">
       <div className="home-left-section mt-40">

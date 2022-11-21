@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import CoxsBazar from "../Pages/CoxsBazar/CoxsBazar";
 import Home from "../Pages/Home/Home";
+import LoadRomes from "../Pages/LoadRomes/LoadRomes";
 import Login from "../Pages/Login/Login";
 import News from "../Pages/News/News";
 import Register from "../Pages/Register/Register";
@@ -29,6 +30,7 @@ export const routes = createBrowserRouter([
       {
         path: "/home",
         element: <Home></Home>,
+        loader: () => fetch("http://localhost:5000/romes"),
       },
       {
         path: "/news",
@@ -45,6 +47,11 @@ export const routes = createBrowserRouter([
       {
         path: "/coxsbazar",
         element: <CoxsBazar></CoxsBazar>,
+      },
+      {
+        path: "/hotels",
+        element: <LoadRomes></LoadRomes>,
+        loader: () => fetch("http://localhost:5000/romes"),
       },
     ],
   },

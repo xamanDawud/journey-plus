@@ -1,5 +1,6 @@
 import React from "react";
 import "./CoxsBazar.css";
+import { Link } from "react-router-dom";
 const CoxsBazar = () => {
   return (
     <div className="home flex justify-conte-between">
@@ -25,6 +26,7 @@ const CoxsBazar = () => {
           name="cox's Bazar"
           defaultValue={"Dhaka"}
           id=""
+          required
         />
         <small className="block mb-3">Destination</small>
         <input
@@ -34,6 +36,7 @@ const CoxsBazar = () => {
           defaultValue={"Cox's Bazar"}
           readOnly
           id=""
+          required
         />
 
         <div className="flex justify-between">
@@ -44,6 +47,7 @@ const CoxsBazar = () => {
               name="date"
               className="from-date-input mb-3 p-3 font-medium rounded-md bg-gray-200"
               id=""
+              required
             />
           </span>
           <span className="to-date">
@@ -53,12 +57,15 @@ const CoxsBazar = () => {
               name="date"
               className="to-date-input mb-3 p-3 font-medium rounded-md bg-gray-200"
               id=""
+              required
             />
           </span>
         </div>
-        <button className="btn btn-warning coxsBooking-btn">
-          Start Booking
-        </button>
+        <Link to="/hotels">
+          <button className="btn btn-warning coxsBooking-btn">
+            Start Booking
+          </button>
+        </Link>
       </div>
     </div>
   );
